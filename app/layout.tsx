@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans_KR } from "next/font/google";
+import { CustomHeader } from "@/components/CustomHeader";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const NotoSans = Noto_Sans_KR({
   subsets: ["latin"],
 });
 
@@ -25,9 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${NotoSans.className}`}
       >
-        {children}
+        <CustomHeader />
+        <main className="w-3/4 mx-auto mt-14">
+          {children}
+        </main>
       </body>
     </html>
   );
