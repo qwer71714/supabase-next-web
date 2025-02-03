@@ -46,7 +46,7 @@ export const CustomHeader = () => {
                             text-sm
                         "
                     />
-                    <IoIosSearch className="absolute left-[72%] top-1/2 transform -translate-y-1/2 text-neutral-500" />
+                    <IoIosSearch className="absolute left-[73%] top-1/2 transform -translate-y-1/2 text-neutral-500" />
                 </form>
                 <div className="flex gap-8">
                     {useroutes.map(user => (
